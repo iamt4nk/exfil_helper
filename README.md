@@ -15,14 +15,14 @@ A simple Python HTTP server for capturing and decoding incoming requests. Useful
 No dependencies required — uses only Python standard library.
 
 ```bash
-git clone https://github.com/yourusername/http-decode-server.git
-cd http-decode-server
+git clone https://github.com/iamt4nk/exfil_helper.git
+cd exfil_helper
 ```
 
 ## Usage
 
 ```bash
-python python_server.py [-p PORT] [-<decoders>]
+python exfil_helper.py [-p PORT] [-<decoders>]
 ```
 
 ### Decoder Flags
@@ -40,25 +40,25 @@ Decoders are applied left-to-right in the order specified.
 
 ```bash
 # No decoding (plaintext)
-python python_server.py
+python exfil_helper.py
 
 # Base64 decode
-python python_server.py -b
+python exfil_helper.py -b
 
 # Base64 decode, then HTML entity decode
-python python_server.py -bH
+python exfil_helper.py -bH
 
 # Hex decode → Base64 decode → URL decode
-python python_server.py -0bu
+python exfil_helper.py -0bu
 
 # Custom port with URL decoding
-python python_server.py -p 8080 -u
+python exfil_helper.py -p 8080 -u
 ```
 
 ## Example Output
 
 ```
-$ python python_server.py -bH
+$ python exfil_helper.py -bH
 Decode chain: Base64 -> HTML
 Server listening on port 4000...
 127.0.0.1 - - [28/Jan/2026 17:31:59] "GET /?data=JiN4MjU7 HTTP/1.1" 200 -
