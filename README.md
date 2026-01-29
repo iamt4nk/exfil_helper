@@ -1,4 +1,4 @@
-# HTTP Decode Server
+# Exfil Helper
 
 A simple Python HTTP server for capturing and decoding incoming requests. Useful for security testing, debugging webhooks, and analyzing encoded payloads.
 
